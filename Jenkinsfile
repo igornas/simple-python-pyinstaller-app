@@ -3,9 +3,10 @@ pipeline {
   stages {
     stage('BuildRoot') {
       steps {
-        sh 'rm -rf GitHub'
-        sh 'mkdir GitHub'
-        sh 'git clone https://github.com/igornas/simple-python-pyinstaller-app GitHub/simple-python-pyinstaller-app'
+        dir('/home/w/GitHub'){
+          sh 'rm -rf simple-python-pyinstaller-app'
+          sh 'git clone https://github.com/igornas/simple-python-pyinstaller-app'
+        }  
       }
     }
   }
