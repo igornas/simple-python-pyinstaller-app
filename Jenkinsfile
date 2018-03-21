@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh 'rm -rf GitHub'
         sh 'mkdir GitHub'
+        sh 'cd GitHub'
         sh 'git clone https://github.com/igornas/simple-python-pyinstaller-app'
       }
     }
