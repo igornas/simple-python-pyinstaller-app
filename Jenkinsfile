@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('BuildRoot') {
       steps {
-        sh 'cd /home/w/GitHub'
-        sh 'touch 1.txt'
+        sh 'rm -rf GitHub'
+        sh 'mkdir GitHub'
         sh 'git clone https://github.com/igornas/simple-python-pyinstaller-app pypineline'
       }
     }
